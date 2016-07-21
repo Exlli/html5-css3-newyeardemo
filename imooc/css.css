@@ -1,0 +1,295 @@
+html,body,div,img {
+    margin: 0;padding:0;
+}
+html,body {
+    height: 100%;
+}
+
+/* music */
+.music{
+  position: fixed;
+  right: 4vw;
+  top: 3vh;
+  width: 15vw;
+  height: 15vw;
+  border: 4px solid #ef1639;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.music img:first-of-type{
+  position: absolute;
+  width: 80%;
+  top:0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  z-index: 1
+}
+.music img:last-of-type
+{
+  position: absolute;
+  width: 28.241%;
+  top:24%;
+  right: 2.5%;
+}
+.music img.play
+{
+  animation: music_play 4s linear infinite;
+}
+@keyframes music_play{
+  0%{transform: rotate(0deg);}
+  100%{transform: rotate(360deg);}
+}
+
+
+.page
+{
+  height: 100%;
+  width: 100%;
+}
+/* page1 */
+.page1
+{
+  height: 100vh;
+  width: 100vw;
+  background: url(image/p1_bg.jpg) no-repeat center;
+  background-size: 100%;
+}
+.page1 .p1_lantern
+{
+  text-align: center;
+}
+.page1 .p1_lantern img
+{
+  height: 71vh;
+}
+.page1 .p1_lantern:before
+{
+  content:"";
+  position: absolute;
+  left:0;
+  right: 0;
+  top: 26vh;
+  margin: auto;
+  width: 30vw;
+  height: 30vw;
+  background-color: #d60b3b;
+  border-radius: 50%;
+  opacity:.5;
+  box-shadow: 0 0 10vw 10vw #d60b3b;
+  animation: p1_lantern .5s infinite alternate;
+}
+@keyframes p1_lantern
+{
+  0%{
+    opacity: .5;
+    transform: scale(.8, .8);
+  }
+  100%{opacity: 1;}
+}
+
+.page1 .p1_imooc
+{
+  width: 30vw;
+  margin: auto;
+}
+.page1 .p1_imooc img
+{
+  width: 100%;
+}
+
+/* page2 */
+.page2
+{
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  background: url(image/p2_bg.jpg) no-repeat center;
+  background-size: 100%;
+  transform: translate(0,0);
+  transition: .3s;
+}
+.page2.fadeOut
+{
+  transform: translate(0,-100%);
+  opacity: .3;
+}
+// 作用，第一屏到第二屏的过度
+.page2 .page2_bg
+{
+  height: 100vh;
+  background-color: #ef1639;
+  animation: page2_bg 1s linear forwards;
+}
+@keyframes page2_bg
+{
+  0%{opacity: 1;}
+  100%{opacity: 0;}
+}
+.page2 img
+{
+  width: 100%;
+}
+.page2 .p2_circle_outer
+{
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 59.375vw;
+  height: 59.375vw;
+  animation: p2_circle_outer 1s linear 3s infinite;
+}
+@keyframes p2_circle_outer
+{
+  0%{transform: rotate(0deg);}
+  100%{transform: rotate(360deg);}
+}
+
+.page2 .p2_circle_middle
+{
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 45.625vw;
+  height: 45.625vw;
+  animation: p2_circle_middle 1s linear 2s infinite;
+}
+@keyframes p2_circle_middle
+{
+  0%{transform: rotate(0deg);}
+  100%{transform: rotate(720deg);}
+}
+.page2 .p2_circle_inner
+{
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 39.375vw;
+  height: 39.375vw;
+  animation: p2_circle_inner 1s linear infinite;
+}
+@keyframes p2_circle_inner
+{
+  0%{transform: rotate(0deg);}
+  100%{transform: rotate(-1080deg);}
+}
+.page2 .p2_2016
+{
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 27.375vw;
+  height: 6.24vh;
+}
+
+/* page3 */
+.page3
+{
+  height: 100vh;
+  width: 100vw;
+  background: url(image/p3_bg.jpg) no-repeat center;
+  z-index: -1;
+  position: absolute;
+  background-size: 100%;
+  top: 100%;
+  transform: translate(0,0);
+  transition: transform .3s;
+  display: none;
+}
+.page3.fadeIn{transform: translate(0,-100%);}
+
+.page3 img
+{
+  width: 100%;
+}
+
+.page3 .p3_logo
+{
+  width: 30vw;
+  height: 6vh;
+  position: absolute;
+  left: 0;
+  top: 10vh;
+  right: 0;
+  margin: auto;
+}
+.page3 .p3_couplet_first
+{
+  width: 22vw;
+  height: 41vh;
+  position: absolute;
+  right: 3.75vw;
+  top: 25vh;
+  margin: auto;
+}
+.page3 .p3_couplet_second
+{
+  width: 22vw;
+  height: 41vh;
+  position: absolute;
+  top: 25vh;
+  left: 3.75vw;
+  margin: auto;
+}
+.page3 .p3_blessing
+{
+  width: 32vw;
+  height: 32vw;
+  position: absolute;
+  left: 0;
+  bottom: 10vh;
+  right: 0;
+  margin: auto;
+  animation: p3_blessing 2s linear infinite;
+}
+@keyframes p3_blessing
+{
+  0%{transform: rotate(0deg);}
+  100%{transform: rotate(360deg);}
+}
+
+.page3 .p3_title
+{
+  width: 48vw;
+  height: 50vh;
+  position: absolute;
+  left: 0;
+  top: 20vh;
+  right: 0;
+  margin: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
